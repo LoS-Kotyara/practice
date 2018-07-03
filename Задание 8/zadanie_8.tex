@@ -1,0 +1,109 @@
+\documentclass[14pt]{beamer}
+\usetheme{Dresden}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\frenchspacing
+\usepackage{listings}
+
+
+
+
+
+
+%\author{}
+\title{Высокоуровневые языки программирования}
+\usecolortheme[dark,accent=green]{solarized}
+\setbeamercovered{transparent} 
+\setbeamertemplate{navigation symbols}{} 
+\date{} 
+\begin{document}
+
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+{\section{Какие языки называются высокоуровневыми?}
+\begin{frame}
+\begin{block}{Высокоуровневый язык программирования "---}
+язык программирования, разработанный для быстроты и удобства использования программистом. Основная черта высокоуровневых языков — это абстракция, то есть введение смысловых конструкций, кратко описывающих такие структуры данных и операции над ними, описания которых на машинном коде (или другом низкоуровневом языке программирования) очень длинны и сложны для понимания.
+\end{block}
+\end{frame}
+}
+
+{
+\section{Примеры высокоуровневых языков}
+\begin{frame}[label=menu]
+\begin{alertblock}{Примеры высокоуровневых языков}
+\begin{itemize}
+
+\item \hyperlink{Python}{\texttt{Python}}
+\item \texttt{Visual Basic}
+\item \texttt{Delphi}
+\item \texttt{Perl}
+\item \texttt{Ruby}
+\item \texttt{C++}
+\item \texttt{C\#}
+\item \texttt{JavaScript}
+\item \texttt{PHP}
+
+\end{itemize}
+\end{alertblock}
+\end{frame}
+}
+
+{\subsection{Python}
+\begin{frame}[label=Python]
+\begin{block}{Python "---}
+
+высокоуровневый язык программирования общего назначения, ориентированный на повышение производительности разработчика и читаемости кода. Синтаксис ядра Python минималистичен. В то же время стандартная библиотека включает большой объём полезных функций.
+\end{block}
+\end{frame}
+
+\begin{frame}[shrink=10]
+\begin{block}
+
+Python поддерживает несколько парадигм программирования, в том числе структурное, объектно-ориентированное, функциональное, императивное и аспектно-ориентированное. Основные архитектурные черты — динамическая типизация, автоматическое управление памятью, полная интроспекция, механизм обработки исключений, поддержка многопоточных вычислений и удобные высокоуровневые структуры данных. Код в Python организовывается в функции и классы, которые могут объединяться в модули (они в свою очередь могут быть объединены в пакеты).
+\end{block}
+\end{frame}
+
+\begin{frame}[shrink=10]
+\begin{block}{}
+Эталонной реализацией Python является интерпретатор CPython, поддерживающий большинство активно используемых платформ. Он распространяется под свободной лицензией Python Software Foundation License, позволяющей использовать его без ограничений в любых приложениях, включая проприетарные. Есть реализации интерпретаторов для JVM (с возможностью компиляции), MSIL (с возможностью компиляции), LLVM и других. Проект PyPy предлагает реализацию Python с использованием JIT"=компиляции, которая значительно увеличивает скорость выполнения Python"=программ.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{block}
+
+Python — активно развивающийся язык программирования, новые версии (с добавлением/изменением языковых свойств) выходят примерно раз в два с половиной года. Вследствие этого и некоторых других причин на Python отсутствуют стандарт ANSI, ISO или другие официальные стандарты, их роль выполняет CPython.
+\end{block}
+\end{frame}
+}
+{\subsubsection{Пример кода на языке Python}
+
+\begin{frame}[fragile]
+\begin{block}{Пример кода на языке Python:}
+\begin{lstlisting}
+def fibonacci(max):        
+    a, b = 0, 1
+    while a < max:
+        yield a            
+        a, b = b, a + b    
+for n in fibonacci(100):   
+    print (n)
+\end{lstlisting}
+\end{block}
+
+\begin{center}
+\hyperlink{menu}{\beamerbutton{Ко всем языкам}}
+\end{center}
+\end{frame}
+}
+\end{document}
