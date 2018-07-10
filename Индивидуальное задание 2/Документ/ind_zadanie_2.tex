@@ -1,0 +1,264 @@
+\documentclass[bachelor, och, pract, times]{SCWorks}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[sort,compress]{cite}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[english,russian]{babel}
+\usepackage[colorlinks=true]{hyperref}
+\begin{document}
+
+% Кафедра (в родительном падеже)
+\chair{Дискретной математики и информационных технологий}
+% Тема работы
+\worktitle{Семейство операционных систем Linux}
+
+% Курс
+\course{1}
+
+% Группа
+\group{121}
+
+% Факультет (в родительном падеже) (по умолчанию "факультета КНиИТ")
+%\department{механико"=математического факультета}
+
+% Специальность/направление код - наименование
+%\napravlenie{231000 "--- Фундаментальная информатика и информационные технологии}
+%\napravlenie{010500 "--- Математическое обеспечение и администрирование информационных систем}
+\napravlenie{230100 "--- Информатика и вычислительная техника}
+%\napravlenie{231000 "--- Программная инженерия}
+%\napravlenie{090301 "--- Компьютерная безопасность}
+
+% Для студентки. Для работы студента следующая команда не нужна.
+%\studenttitle{Студентки}
+
+% Фамилия, имя, отчество студента(ки) в родительном падеже
+\studentName{Давиденко Алексея Алексеевича}
+
+% Заведующий кафедрой
+\chtitle{к. ф.-м.н., доцент} % степень, звание
+\chname{Л.Б. Тяпаев}  % Инициалы и фамилия
+
+%Научный руководитель (для реферата преподаватель проверяющий работу)
+\satitle{к. ф.-м.н., доцент} %должность, степень, звание
+\saname{В.А. Поздняков}  % Инициалы и фамилия
+
+% Руководитель практики от организации (только для практики,
+% для остальных типов работ не используется)
+\patitle{} %должность, степень, звание
+\paname{}  % Инициалы и фамилия
+
+% Семестр (только для практики, для остальных
+% типов работ не используется)
+\term{2} % номер
+
+% Наименование практики (только для практики, для остальных
+% типов работ не используется)
+\practtype{Ознакомительная практика}
+
+% Продолжительность практики (количество недель) (только для практики,
+% для остальных типов работ не используется)
+\duration{2} % число недель
+
+% Даты начала и окончания практики (только для практики, для остальных
+% типов работ не используется)
+\practStart{29.06.2018}  % в формате ДД.ММ.ГГГГ
+\practFinish{12.07.2018} % в формате ДД.ММ.ГГГГ
+
+% Год выполнения отчета
+\year{2018}  % в формате ГГГГ
+
+\MakeTitle
+
+% Включение нумерации рисунков, формул и таблиц по разделам
+% (по умолчанию - нумерация сквозная)
+% (допускается оба вида нумерации)
+%\secNumbering
+
+
+\tableofcontents
+
+
+
+
+\include{intro}
+\include{sec1}
+\include{sec2}
+\include{sec3}
+\include{sec4}
+\include{conclusion}
+\include{bibliography}
+% Окончание основного документа и начало приложений
+% Каждая последующая секция документа будет являться приложением
+% Приложения могут отсутствовать
+
+\appendix
+
+\section{Изображения}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{790px-Unix_timeline.png}
+    \caption{История развития UNIX-систем.}
+    \label{fig:hist}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=220px]{UNIX.png}
+    \caption{Логотип UNIX}
+    \label{fig:UNIX_symbol}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=125px]{128px-Heckert_GNU_white.png}
+    \caption{Логотип GNU}
+    \label{fig:GNU_symbol}
+\end{figure}
+
+
+
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=100px]{Tux.png}
+    \caption{Талисман Linux - пингвин Tux}
+    \label{fig:linux_symbol}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=100px]{BVXyPwe.png}
+    \caption{Логотип Minix}
+    \label{fig:minix_symbol}
+\end{figure}
+
+\section{Семейства дистрибутивов Linux}
+
+
+\begin{longtable}{|p{0.3\textwidth}|p{0.7\textwidth}|}
+    \hline
+        Ориентация & Основные представители\\\hline
+        Дистрибутивы общего назначения & 
+        \begin{minipage}{\textwidth}
+        \begin{list}{•}{~}
+            \item Fedora Core
+            \item Debian GNU/Linux
+            \item SuSE
+            \item Mandrakelinux
+            \item Slackware
+            \item ALT Linux
+            \item ASP Linux
+            \item Gentoo
+            \item Linux From Scratch
+            \item Linspire
+            \item PLD Linux Distribution
+            \item Red Flag Linux
+            \item Sorcerer GNU/Linux
+            \item Source Mage
+            \item Turbolinux
+            \item Ubuntu Linux
+            \item Xandros
+        \end{list}
+        ~
+        \end{minipage}
+    \\\hline
+    \smallskip Дистрибутивы для мэйнфреймов& \begin{list}{•}{~} \item Linux on zSeries\end{list}
+    \\\hline
+    Серверные дистрибутивы &
+    \begin{minipage}{\textwidth}
+        \begin{list}{•}{~}
+            \item Red Hat Enterprise Linux
+            \item SuSE Linux Enterprise Server
+            \item SuSEALT Linux Master
+            \item ASP Linux Server
+            \item LTSP
+        \end{list}
+        ~
+    \end{minipage}
+    \\\hline
+    Защищенные дистрибутивы &
+    \begin{minipage}{\textwidth}
+        \begin{list}{•}{~}
+            \item Trustix
+            \item SELinux
+            \item Tinfoil Hat Linux
+            \item Trinux
+            \item "Утес-К"
+        \end{list}
+        ~
+    \end{minipage}
+    \\\hline
+    Дистрибутивы для мультимедиа &
+    \begin{minipage}{\textwidth}
+        \begin{list}{•}{~}
+            \item MoviX
+            \item Agnula
+            \item Dynebolic
+        \end{list}
+        ~
+    \end{minipage}
+    \\\hline
+    Дистрибутивы для маршрутизаторов и файерволов &
+    \begin{minipage}{\textwidth}
+        \begin{list}{•}{~}
+            \item Coyote Linux
+            \item Linux Router Project
+            \item Gibraltar
+            \item IPCop Firewall
+            \item Sentry Firewall
+            \item SmoothWall
+        \end{list}
+        ~
+    \end{minipage}
+    \\\hline
+    Дистрибутивы для встроенных систем &
+    \begin{minipage}{\textwidth}
+        \begin{list}{•}{~}
+            \item Embedded Debian
+            \item ELKS Linux
+            \item Linux Microcontroller Project
+        \end{list}
+        ~
+    \end{minipage}
+    \\\hline
+    Дистрибутивы для "слабых" компьютеров &
+    \begin{minipage}{\textwidth}
+        \begin{list}{•}{~}
+            \item Vector Linux
+            \item Vector Linux
+            \item ttylinux
+        \end{list}
+        ~
+    \end{minipage}
+    \\\hline
+    Дистрибутивы для USB &
+    \begin{minipage}{\textwidth}
+        \begin{list}{•}{~}
+            \item Flonix
+            \item Flash Puppy
+            \item SPBLinux
+        \end{list}
+        ~
+    \end{minipage}
+    \\\hline
+    Дистрибутивы, запускаемые из-под Windows &
+    \begin{minipage}{\textwidth}
+        \begin{list}{•}{~}
+            \item Cooperative Linux
+        \end{list}
+        ~
+    \end{minipage}
+    \hline
+\end{longtable}
+
+
+
+\end{document}
