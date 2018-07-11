@@ -1,0 +1,73 @@
+\documentclass[12pt,letterpaper]{extreport}
+\usepackage[14pt]{extsizes}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper,tmargin=1.5cm,bmargin=1.25cm,lmargin=0.5cm,rmargin=1.5cm}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,shapes}
+\begin{document}
+\pagestyle{empty}
+\tikzstyle{block} =
+        [
+                rectangle,
+                draw,
+                fill = blue!20,
+                text width = 3.5cm,
+                text centered,
+                rounded corners,
+                minimum height = 4cm
+        ]
+\tikzstyle{line} =
+        [
+                draw,
+                -latex'
+        ]
+\tikzstyle{cloud} =
+        [
+                draw,
+                ellipse,
+                fill = red!20,
+                node distance = 4cm,
+                minimum height = 2cm
+        ]
+\begin{tikzpicture}[node distance = 4.5cm]
+        \node [cloud] (start) {Начало};
+        \node [block, below of = start] (phase1) {Создание объекта класса Calculating};
+        \node [block, below of = phase1] (phase2) {Метода getBDay};
+        \node [block, left of = phase2] (discription21){Считывание даты рождения};
+       	\node [block, left of = discription21] (discription22){Проверка на правильность даты};
+       	\node [block, left of = discription22] (discription23){Определение номера дня в юлианском
+       	календаре};
+        \node [block, below of = phase2] (phase3) {Метод getCDay};
+        \node [block, left of = phase3] (discription31) {Считывание сегодняшней даты};
+        \node [block, left of = discription31] (discription32){Проверка на правильность даты};
+        \node [block, left of = discription32] (discription33){Определение номера дня в юлианском
+       	календаре};
+       	\node [block, below of = phase3] (phase4) {Нахождение разности между номером сегодняшней даты и номером даты рождения};
+       	\node [block, below of = phase4] (phase5){Вывод полученного значения};
+       	\node [cloud, below of = phase5] (finish){Конец};
+       	
+       	
+       	\path [line] (start) -- (phase1);
+       	\path [line] (phase1) -- (phase2);
+       	\path [line] (phase2) -- (phase3);
+       	\path [line] (phase3) -- (phase4);
+       	\path [line] (phase4) -- (phase5);
+       	\path [line] (phase5) -- (finish);
+       	\path [line] (phase2) -- (discription21);
+       	\path [line] (discription21) -- (discription22);
+       	\path [line] (discription22) -- (discription23);
+       	\path [line] (phase3) -- (discription31);
+       	\path [line] (discription31) -- (discription32);
+       	\path [line] (discription32) -- (discription33);
+       	
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,8 @@
+\begin{block}{Пример программы на Ruby}
+
+\begin{lstlisting}
+irb(main):002:0> puts "Hello World"
+Hello World
+=> nil
+\end{lstlisting}
+\end{block}
